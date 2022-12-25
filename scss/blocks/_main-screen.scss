@@ -1,26 +1,46 @@
 .main-screen {
+    background: $color-white2;
     padding: 134px 0 94px;
     display: flex;
     position: relative;
     left: 0;
     align-items: center;
+    @include tablet {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 40px;
+    }
+    @include mobile {
+        padding: 50px 0 40px;
+    }
     &::before {
         content: '';
         position: absolute;
         display: block;
-        width: 1090px;
+        width: 75%;
         height: 100%;
         background: $color-grad1;
         mix-blend-mode: normal;
         opacity: 0.05;
-        border-radius: 0px 20px;
+        border-radius: 0px 20px 20px 0px;
+        z-index: 0;
+        @include desktop-small {
+            width: 100%;
+        }
     }
 
     &__container {
+        z-index: 2;
         
     }
     &__info {
         max-width: 560px;
+        @include tablet {
+            text-align: center;
+            margin-inline: auto; 
+
+        }
     }
 
     &__title {
@@ -28,17 +48,29 @@
         letter-spacing: -1px;
         margin-bottom: 20px;
         max-width: 537px;
+        @include mobile {
+            font-size: 40px;
+        }
     }
 
     &__desc {
         @include text($font1, 400, 20px, 30px, $color-text2);
         margin-bottom: 40px;
         max-width: 560px;
+        @include mobile {
+            font-size: 15px;
+        }
     }
 
     &__video {
         position: absolute;
         right: 0;
+        cursor: pointer;
+        z-index: 3;
+        @include desktop-small {
+            position: static;
+            
+        }
     }
 }
 
