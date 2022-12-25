@@ -4,7 +4,7 @@
     align-items: center;
     padding: 37px 0;
     &__logo {
-        @include text($font, 700, 28px, 33px, $color-body);
+        @include text($font1, 700, 28px, 33px, $color-body);
     }
     &__burger {
         display: none;
@@ -32,7 +32,7 @@
     }
 
     &__a {
-        @include text($font, 400, 16px, 19px, $color-body);
+        @include text($font1, 400, 16px, 19px, $color-body);
         transition: $transition;
         @include desktop-small {
             color: $color-white;
