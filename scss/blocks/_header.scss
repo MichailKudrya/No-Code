@@ -1,22 +1,43 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 37px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding-top: 37px;
+        padding-bottom: 37px;
+    }
+
     &__logo {
         @include text($font1, 700, 28px, 33px, $color-body);
     }
+
     &__burger {
         display: none;
+
         @include desktop-small {
             display: block;
         }
     }
 }
+
 .header-nav {
+    display: flex;
+    flex-grow: 1;
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        @include desktop-small {
+            flex-direction: column;
+
+        }
+    }
     .material-icons {
         color: $color-white;
         display: none;
+
         @include desktop-small {
             display: block;
             position: absolute;
@@ -24,25 +45,35 @@
             right: 20px;
         }
     }
+
     &__ul {
         padding: 0;
         display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
         align-items: center;
         gap: 24px;
+        @include desktop-small {
+            gap: 50px;
+        }
     }
 
     &__a {
-        @include text($font1, 400, 16px, 19px, $color-body);
+        @include text($font1, 700, 16px, 20px, $color-text1);
         transition: $transition;
-        @include desktop-small {
-            color: $color-white;
-        }
 
         &._active,
         &:hover {
-            color: $color-primary;
+            color: $color-text1;
+            @include desktop-small {
+                color: $color-white;
+            }
+        }
+        @include desktop-small {
+            color: $color-white;
         }
     }
+
     @include desktop-small {
         position: fixed;
         z-index: 9;
@@ -53,16 +84,19 @@
         background: rgba(0, 0, 0, 0.8);
         transform: translateX(-150%);
         transition: $transition;
+
         .header-nav__ul {
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100%;
         }
+
         .header-nav__a {
             font-size: 18px;
         }
     }
+
     &._active {
         transform: translateX(0);
     }

@@ -14,6 +14,10 @@ body {
     overflow: hidden;
   }
 }
+h1, p {
+  margin: 0;
+  padding: 0;
+}
 a {
   color: $color-white;
   text-decoration: none;
@@ -31,4 +35,18 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.btn {
+  @include text($font1, 700, 16px, 20px, $color-white);
+  
+  padding: 15px 30px;
+  border-radius: 33px;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  cursor: pointer;
+  &_primary {
+    background: $color-grad1;
+  }
 }

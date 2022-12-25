@@ -9,15 +9,18 @@
 	<link rel="stylesheet" href="style.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body id="body">
-	<div class="container">
-		<header class="header">
-			<a href="#" class="header__logo">Logo</a>
+	<header class="header">
+		<div class="container header__wrapper">
+			<a href="#" class="header__logo">
+				<img src="./img/Logo.svg" alt="Logo">
+			</a>
 			<div class="header__burger">
 				<span id="icon-menu" onclick="navToggle()" class="material-icons _active">
 					menu
@@ -25,31 +28,59 @@
 			</div>
 			<nav id="nav" class="header-nav">
 				<ul class="header-nav__ul">
-					<li class="header-nav__li">
-						<a href="#" class="header-nav__a _active">About</a>
-					</li>
-					<li class="header-nav__li">
-						<a href="#" class="header-nav__a">Services</a>
-					</li>
-					<li class="header-nav__li">
-						<a href="#" class="header-nav__a">Portfolio</a>
-					</li>
-					<li class="header-nav__li">
-						<a href="#" class="header-nav__a">Testimonials</a>
-					</li>
-					<li class="header-nav__li">
-						<a href="#" class="header-nav__a">Pricing</a>
-					</li>
-					<li class="header-nav__li">
-						<a href="#" class="header-nav__a">Contact</a>
-					</li>
+					<div class="header-nav__row">
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a _active">Course topics</a>
+						</li>
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a">What students say</a>
+						</li>
+					</div>
+					<div class="header-nav__row">
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a">Sign in</a>
+						</li>
+						<li class="header-nav__li">
+							<a href="#" class=" btn btn_primary">Get started</a>
+						</li>
+					</div>
 				</ul>
 				<span id="icon-close" onclick="navToggle()" class="material-icons">
 					close
 				</span>
 			</nav>
-		</header>
-		<script src="script.js"></script>
+		</div>
+	</header>
+
+	<section class="main-screen">
+		<div class="container main-screen__container">
+			<div class="main-screen__info">
+				<h1 class="main-screen__title">Learn no-code tools today.</h1>
+				<p class="main-screen__desc">Create beautiful webflow sites with flowbase. Clone for
+					free and get started building a site today.</p>
+				<a href="#" class="btn btn_primary">Get started</a>
+				<div class="students">
+					<div class="students__list">
+						<div class="students__img">
+							<img src="./img/user1.png" alt="User">
+						</div>
+						<div class="students__img">
+							<img src="./img/user2.png" alt="User">
+						</div>
+						<div class="students__img">
+							<img src="./img/user3.png" alt="User">
+						</div>
+					</div>
+					<div class="students__text">Join over <span>4,000+</span> students</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="main-screen__video">
+			<img src="./img/video.png" alt="Video">
+		</div>
+	</section>
+	<script src="script.js"></script>
 </body>
 
 </html>
