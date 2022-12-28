@@ -1,0 +1,108 @@
+.learn {
+    margin-top: 150px;
+    margin-bottom: 120px;
+
+    &__container {
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.learn-item {
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    border: 1px solid transparent;
+    border-radius: 21px;
+    padding: 39px 50px 40px 45px;
+
+
+    img {
+        width: 40px;
+        height: 33px;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        @include tablet {
+            text-align: center;
+            
+        }
+    }
+
+    &__title {
+        @include text($font2, 700, 24px, 24px, $color-text1);
+        margin: 0;
+    }
+
+    &__desc {
+        @include text($font1, 400, 16px, 24px, $color-text2);
+        margin-top: 20px;
+        max-width: 480px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 33px;
+        padding: 23px 34px;
+        background: $color-grad1;
+        @include tablet {
+            padding: 18px 28px;
+        }
+    }
+
+    &__video {
+        @include text($font1, 600, 16px, 20px, $color-white);
+        padding-right: 37px;
+        border-right: 2px solid $color-primary-dark;
+    }
+
+    &__hours {
+        @include text($font1, 600, 16px, 20px, $color-white);
+        padding-left: 37px;
+    }
+}
+
+.info {
+    max-width: 560px;
+    margin: 0 auto;
+
+    &__title {
+        @include text($font2, 700, 46px, 56px, $color-text1);
+        text-align: center;
+        margin: 0;
+    }
+
+    &__desc {
+        @include text($font1, 400, 20px, 30px, $color-text2);
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+}

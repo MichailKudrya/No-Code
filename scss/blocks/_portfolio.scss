@@ -1,0 +1,14 @@
+.portfolio {
+    margin-top: 10px;
+    margin-bottom: 90px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+    }
+}

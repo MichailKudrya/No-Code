@@ -1,0 +1,64 @@
+.students {
+    background: $color-grad1;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__info {
+        
+        h2 {
+            color: $color-white;
+        }
+        p {
+            color: $color-white;
+        }
+    }
+}
+
+.swiper {
+    max-width: 550px;
+    min-height: 330px;
+}
+.swiper-wrapper {
+
+}
+.swiper-slide {
+    padding: 50px 40px 40px 50px;
+    background: $color-primary-transparent;
+    border-radius: 20px;
+
+    &__desc {
+        @include text($font1, 400, 20px, 30px, $color-white);
+        margin-bottom: 30px;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__name {
+    }
+
+    &__title {
+        @include text($font1, 700, 16px, 20px, $color-white);
+        margin: 0;
+    }
+    &__job {
+        @include text($font1, 400, 16px, 20px, $color-white);
+        margin: 0;
+        opacity: 0.8;
+    }
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}

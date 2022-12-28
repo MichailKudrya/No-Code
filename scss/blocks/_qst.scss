@@ -1,0 +1,55 @@
+.qst {
+    padding-top: 150px;
+    margin-bottom: 100px;
+
+    &__title {
+        @include text($font2, 700, 46px, 56px, $color-text1);
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__body {
+        display: none;
+        max-width: 660px;
+        padding: 0px 40px 40px;
+        @include text($font1, 400, 16px, 26px, $color-text2);
+        
+    }
+
+    &__thing {
+        
+        border: 1px solid $color-grad1;
+        &._active {
+            .qst__body {
+                display: block;
+            }
+            .thing__arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+        cursor: pointer;
+    }
+
+}
+
+.thing {
+    border: 1px solid rgba(205, 16, 255, 0.2);
+    transition: $transition;
+    margin-bottom: 20px;
+    border-radius: 21px;
+
+    &__title {
+        @include text($font2, 700, 20px, 24px, $color-text1);
+    }
+
+    &__arrow {
+        transition: $transition;
+    }
+}
