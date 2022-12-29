@@ -60,6 +60,7 @@
         p {
             @include text($font1, 400, 16px, 20px, $color-text2);
             margin-bottom: 20px;
+            cursor: pointer;
         }
     }
 
