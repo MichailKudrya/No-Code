@@ -46,6 +46,10 @@ img {
   outline: 0;
   display: inline-block;
   cursor: pointer;
+  transition: $transition;
+  &:hover {
+    transform: translateY(-10px); 
+  }
   &_primary {
     background: $color-grad1;
   }
