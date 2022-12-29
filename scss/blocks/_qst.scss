@@ -6,6 +6,9 @@
         @include text($font2, 700, 46px, 56px, $color-text1);
         text-align: center;
         margin-bottom: 60px;
+        @include mobile {
+            font-size: 34px;
+        }
     }
 
     &__body {
@@ -13,18 +16,25 @@
         max-width: 660px;
         padding: 0px 40px 40px;
         @include text($font1, 400, 16px, 26px, $color-text2);
-        
+
     }
 
     &__thing {
-        
+
         border: 1px solid $color-grad1;
+
         &._active {
             .qst__body {
                 display: block;
             }
+
             .thing__arrow {
                 transform: rotate(180deg);
+
+                img {
+                    min-width: 45px;
+                    min-height: 45px;
+                }
             }
         }
     }
@@ -47,6 +57,10 @@
 
     &__title {
         @include text($font2, 700, 20px, 24px, $color-text1);
+        @include mobile {
+            font-size: 15px;
+            max-width: 220px;
+        }
     }
 
     &__arrow {

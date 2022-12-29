@@ -1,0 +1,34 @@
+.ready {
+    padding-top: 20px;
+    padding-bottom: 120px;
+
+    &__wrapper {
+        text-align: center
+    }
+
+    &__guarantee {
+        @include text($font2, 700, 12px, 15px, $color-primary);
+        background: rgba(255, 215, 169, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        max-width: 400px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 8px 34px;
+        border-radius: 33px;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        @include text($font2, 700, 46px, 56px, $color-text1);
+        max-width: 650px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        background: $color-grad1;
+        
+    }
+}

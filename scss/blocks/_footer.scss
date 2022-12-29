@@ -1,0 +1,45 @@
+.footer {
+    margin-bottom: 100px;
+    background: rgba(205, 16, 255, 0.05);
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet-small {
+            flex-direction: column;
+        }
+        gap: 30px;
+        img {
+            width: 150px;
+            height: 31px;
+        }
+    }
+
+    &__email {
+        display: flex;
+        justify-content: space-between;
+        max-width: 890px;
+        width: 100%;
+        border-radius: 33px;
+        
+    }
+
+    input {
+        @include text($font1, 400, 16px, 19px, $color-text2);
+        width: 100%;
+        border: 0;
+        outline: 0;
+        border-radius: 33px;
+    }
+   
+
+    &__btn {
+        background: $color-grad1;
+    }
+
+    &__links {
+    }
+}
+.btn {
+}
