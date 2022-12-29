@@ -27,10 +27,14 @@
 
     input {
         @include text($font1, 400, 16px, 19px, $color-text2);
+        opacity: 0.5;
         width: 100%;
         border: 0;
         outline: 0;
         border-radius: 33px;
+        &::placeholder {
+            color: rgba(79, 89, 106, 0.5);
+        }
     }
    
 
